@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch", // Or (lldb) Launch, depending on your debugger
+            "type": "cppdbg",      // Specifies the C/C++ debugger type
+            "request": "launch",   // This configuration will launch a new process
+            "program": "${workspaceFolder}/a.out", // Path to your compiled executable
+            "args": [],            // Command-line arguments to pass to your program
+            "stopAtEntry": false,  // True to stop at the entry point of the program (main)
+            "cwd": "${workspaceFolder}", // Current working directory for the debugger
+            "environment": [],     // Environment variables
+            "externalConsole": false, // Set to true to use an external console window
+            "MIMode": "gdb",       // Debugger mode: "gdb" for GCC, "lldb" for Clang/LLVM
+            "miDebuggerPath": "/usr/bin/gdb", // Path to your debugger executable (e.g., gdb, lldb)
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // Pre-launch task: This runs before debugging starts.
+            // It's typically used to build your program.
+            "preLaunchTask": "C/C++: gcc build active file" // Name of your build task
+        }
+    ]
+}
