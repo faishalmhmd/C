@@ -9,7 +9,11 @@ int main () {
     scanf("%d", &angka);
 
     printf("Masukan Char: ");
-    scanf("%c", &huruf);
+    scanf(" %c", &huruf);
+
+
+    printf("INT   : %d \n",angka);
+    printf("CHAR  : %c",huruf);
 
     return 0;
 }

@@ -1,18 +1,13 @@
 #include <stdio.h>
 
+
 int main () {
-    int arr[100];
-    int n = 0;
-    int input;
-    char tambah;
+    int *angka;
 
-    do {
-        if(n >= 100) {
-            printf("Array sudah penuh")
-        }
+    printf("Masukkan Angka : ");
+    scanf("%d", &angka);
 
-    }
-    while {
+    printf("INT   : %d \n",angka);
 
-    }
-} 
+    return 0;
+}
