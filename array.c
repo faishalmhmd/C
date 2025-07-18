@@ -1,16 +1,23 @@
-    #include <stdio.h>
-    #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
     int main () {
-        int umur;
-
-
+        int arr[100];
+        int input;
+        int n = 0;
+        char tambah;
         do {
-            printf("Silahkan Masukkan Umur : ");
-            scanf("%d",&umur);
-        } while ( umur < 17);
+            printf("Silahkan Masukkan Angka : ");
+            scanf("%d", &input);
+            arr[n] = input;
+            n++;
 
-        printf("Umur Lebih dari 17 : %d", umur);
-
+            printf("Tambah Data Lagi ?");
+            scanf(" %c",&tambah);
+        } while (tambah == 'y' || tambah == 'Y');
+        printf("List Data");
+        for(int i=0; i < n; i++) {
+            printf("Data %d == %d \n",i+1,arr[i]);
+        }
         return 0;
     } 
