@@ -1,14 +1,10 @@
 #include <stdio.h>
 
-void displayPointer(int *a) {
-    printf("%d",*a);
-}
-
-int main () {
+int main() {
     int a = 10;
-    int *pointToA = &a;
+    int *p = &a;
 
-    displayPointer(&a);
-
+    printf("isi pointer *p = %d \n",*p);
+    printf("alamat pointer *p %p \n", (void*)&p);
     return 0;
 }
