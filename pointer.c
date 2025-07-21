@@ -1,13 +1,14 @@
 #include <stdio.h>
 
+void displayPointer(int *a) {
+    printf("%d",*a);
+}
 
 int main () {
-    int *angka;
+    int a = 10;
+    int *pointToA = &a;
 
-    printf("Masukkan Angka : ");
-    scanf("%d", &angka);
-
-    printf("INT   : %d \n",angka);
+    displayPointer(&a);
 
     return 0;
 }
